@@ -4,16 +4,27 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Component/Header.jsx'
 import Home from './Component/Home.jsx'
-import Footer from './Component/Footer.jsx'   
-
+import Footer from './Component/Footer.jsx'
+import React from 'react'
+import Applayout from './Component/Applayout.jsx'
+import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 function App() {
-  const [count, setCount] = useState(0)
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Applayout />,
+      children:[
+        {
+        path: "/",
+        element: <Home />
+      }
+    ]
+    }
+  ])
 
   return (
     <>
-      <Header />
-      <Home />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   )
 }
