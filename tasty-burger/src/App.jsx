@@ -5,6 +5,7 @@ import './App.css'
 import Header from './Component/Header.jsx'
 import Home from './Component/Home.jsx'
 import Footer from './Component/Footer.jsx'
+import About from './Component/about.jsx'
 import React from 'react'
 import Applayout from './Component/Applayout.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
@@ -17,6 +18,10 @@ function App() {
         {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/about",
+        element: <About />
       }
     ]
     }

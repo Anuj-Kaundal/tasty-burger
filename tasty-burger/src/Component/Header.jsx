@@ -11,13 +11,13 @@ function Header() {
       <div className='flex justify-between fixed top-0 left-0 w-full z-50 bg-red-900 mb-10 items-center p-5'>
         <img src="logo.png" alt="" height={150} width={150} />
         <ul className='hidden lg:flex items-center gap-8 text-lg  text-white font-semibold p-5'>
-          <li onClick={() => navigator('/')} className='cursor-pointer'>HOME</li>
-          <li onClick={() => navigator('/about')} className='cursor-pointer'>ABOUT</li>
-          <li onClick={() => navigator('/ourmenu')} className='cursor-pointer'>MENU</li>
-          <li onClick={() => navigator('/shop')} className='cursor-pointer'>SHOP</li>
-          <li onClick={() => navigator('/blog')} className='cursor-pointer'>BLOG</li>
-          <li onClick={() => navigator('/contact')} className='cursor-pointer'>CONTACT</li>
-          <li><FaCartArrowDown /></li>
+          <li onClick={() => navigator('/')} className='cursor-pointer hover:text-yellow-400'>HOME</li>
+          <li onClick={() => navigator('/about')} className='cursor-pointer hover:text-yellow-400'>ABOUT</li>
+          <li onClick={() => navigator('/ourmenu')} className='cursor-pointer hover:text-yellow-400'>MENU</li>
+          <li onClick={() => navigator('/shop')} className='cursor-pointer hover:text-yellow-400'>SHOP</li>
+          <li onClick={() => navigator('/blog')} className='cursor-pointer hover:text-yellow-400'>BLOG</li>
+          <li onClick={() => navigator('/contact')} className='cursor-pointer hover:text-yellow-400'>CONTACT</li>
+          <li><FaCartArrowDown className='cursor-pointer hover:text-yellow-400'/></li>
         </ul>
         {
           MobileMenu ?
@@ -28,12 +28,12 @@ function Header() {
         {
             MobileMenu &&
             <ul className='flex flex-col items-center gap-8 text-lg  text-white font-semibold p-5 absolute top-20 left-0 w-full bg-red-900 lg:hidden'>
-              <li onClick={() => {navigator('/'); setMobileMenu(false);}} className='cursor-pointer'>HOME</li>
-              <li onClick={() => {navigator('/about'); setMobileMenu(false);}} className='cursor-pointer'>ABOUT</li>
-              <li onClick={() => {navigator('/ourmenu'); setMobileMenu(false);}} className='cursor-pointer'>MENU</li>
-              <li onClick={() => {navigator('/shop'); setMobileMenu(false);}} className='cursor-pointer'>SHOP</li>
-              <li onClick={() => {navigator('/blog'); setMobileMenu(false);}} className='cursor-pointer'>BLOG</li>
-              <li onClick={() => {navigator('/contact'); setMobileMenu(false);}} className='cursor-pointer'>CONTACT</li>
+              <li onClick={() => {navigator('/'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>HOME</li>
+              <li onClick={() => {navigator('/about'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>ABOUT</li>
+              <li onClick={() => {navigator('/ourmenu'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>MENU</li>
+              <li onClick={() => {navigator('/shop'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>SHOP</li>
+              <li onClick={() => {navigator('/blog'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>BLOG</li>
+              <li onClick={() => {navigator('/contact'); setMobileMenu(false);}} className='cursor-pointer hover:text-yellow-400'>CONTACT</li>
               <li><FaCartArrowDown /></li>
             </ul>
             
