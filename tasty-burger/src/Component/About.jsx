@@ -3,7 +3,8 @@ import React from 'react'
 function About() {
     return (
         <div>
-            <div className='lg:flex lg:flex-row mt-20 justify-center gap-20 lg:p-20 md:flex-col sm:flex-col reverse bg-amber-500 p-20'>
+            {/* about us section start */}
+            <div className='flex flex-col-reverse lg:flex-row mt-20 justify-center gap-20 lg:p-20  bg-amber-500 p-20'>
                 <div className='lg:w-1/2 w-full text-center lg:text-left space-y-5'>
                     <p>
                         At Tasty Burger, we believe burgers are more than just fast food — they’re a feeling.
@@ -18,32 +19,32 @@ function About() {
                         We combine premium-quality ingredients, home-style preparation, and fast delivery to bring delicious burgers straight to your doorstep.
                     </p>
 
-                    <h1 className='font-semibold text-xl sm:text-2xl md:text-3xl mt-5'>
+                    <h1 className='font-semibold sm:text-2xl md:text-4xl mt-5'>
                         What We Do
                     </h1>
 
-                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl mt-4'>
+                    <h2 className='font-semibold sm:text-xl md:text-2xl mt-4'>
                         🍔 Fresh Burger Experience
                     </h2>
                     <p className='lg:pl-10 lg:pr-30'>
                         Every time you order from Tasty Burger, you enjoy freshly prepared burgers made with soft buns, juicy patties, and signature sauces — cooked to perfection for maximum taste.
                     </p>
 
-                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl mt-4'>
+                    <h2 className='font-semibold sm:text-xl md:text-2xl mt-4'>
                         👨‍🍳 Skilled Kitchen Team
                     </h2>
                     <p className='lg:pl-10 lg:pr-30'>
                         Our burgers are prepared by trained cooks who focus on taste, hygiene, and consistency, ensuring every bite meets our quality standards.
                     </p>
 
-                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl mt-4'>
+                    <h2 className='font-semibold sm:text-xl md:text-2xl mt-4'>
                         🚀 Quick & Reliable Delivery
                     </h2>
                     <p className='lg:pl-10 lg:pr-30'>
                         We ensure fast, safe, and reliable delivery so your burgers arrive hot, fresh, and on time, every single order.
                     </p>
 
-                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl mt-4'>
+                    <h2 className='font-semibold sm:text-xl md:text-2xl mt-4'>
                         💰 Value Meals & Combos
                     </h2>
                     <p className='lg:pl-10 lg:pr-30'>
@@ -52,9 +53,49 @@ function About() {
                 </div>
 
                 <div>
-                    <img src="about.png" alt="" height={200} width={200} className='lg:w-100 pt-10 w-full rounded-xl' />
+                    <img src="about.png" alt="" height={200} width={200} className='lg:w-100 pt-10 lg:p-0 w-full rounded-xl' />
                 </div>
             </div>
+            {/* about us section end */}
+            {/* Deliver Partners section start */}
+            <div className="flex flex-col items-center space-y-4 px-6 py-12">
+
+                {/* Section Heading */}
+                <h2 className="text-3xl font-bold text-center">
+                    We Deliver With Trusted Partners
+                </h2>
+
+                {/* Subheading */}
+                <p className="text-gray-600 text-center max-w-xl">
+                    Your favorite food, delivered safely and hygienically via our trusted delivery partners.
+                </p>
+
+                {/* Partners */}
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mt-8">
+
+                    {/* Swiggy */}
+                    <div className="flex flex-col items-center gap-3">
+                        <img
+                            src="swiggy.png"
+                            alt="Swiggy delivery partner"
+                            className="w-24 h-24"
+                        />
+                        <h3 className="font-semibold text-lg">Swiggy Awards 2024</h3>
+                    </div>
+
+                    {/* Zomato */}
+                    <div className="flex flex-col items-center gap-3">
+                        <img
+                            src="zomato.png"
+                            alt="Zomato delivery partner"
+                            className="w-24 h-24 "
+                        />
+                        <h3 className="font-semibold text-lg">Zomato Gold Partner</h3>
+                    </div>
+
+                </div>
+            </div>
+            {/* Deliver Partners section end */}
         </div>
     )
 }
