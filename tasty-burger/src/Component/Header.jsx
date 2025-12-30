@@ -23,7 +23,21 @@ function Header() {
           MobileMenu ?
           <IoMdArrowDropupCircle className='lg:hidden text-white cursor-pointer' size={30} onClick={()=>setMobileMenu(false)} /> :
           <IoMdArrowDropdownCircle className='lg:hidden text-white cursor-pointer' size={30} onClick={() => setMobileMenu(true)} />
+          
         }
+        {
+            MobileMenu &&
+            <ul className='flex flex-col items-center gap-8 text-lg  text-white font-semibold p-5 absolute top-20 left-0 w-full bg-red-900 lg:hidden'>
+              <li onClick={() => {navigator('/'); setMobileMenu(false);}} className='cursor-pointer'>HOME</li>
+              <li onClick={() => {navigator('/about'); setMobileMenu(false);}} className='cursor-pointer'>ABOUT</li>
+              <li onClick={() => {navigator('/ourmenu'); setMobileMenu(false);}} className='cursor-pointer'>MENU</li>
+              <li onClick={() => {navigator('/shop'); setMobileMenu(false);}} className='cursor-pointer'>SHOP</li>
+              <li onClick={() => {navigator('/blog'); setMobileMenu(false);}} className='cursor-pointer'>BLOG</li>
+              <li onClick={() => {navigator('/contact'); setMobileMenu(false);}} className='cursor-pointer'>CONTACT</li>
+              <li><FaCartArrowDown /></li>
+            </ul>
+            
+          }
       </div>
     </div>
   )

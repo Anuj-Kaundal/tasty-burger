@@ -3,6 +3,8 @@ import { FaStar } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
+import data from './data.js'
+console.log(data)
 function Home() {
   return (
     <div className='bg-[url("/bg.jpg")] bg-fixed bg-cover bg-center pt-25'>
@@ -64,172 +66,40 @@ function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
               {/* 1st card */}
-              <div className="border rounded-md">
-                <img src="burger-1.jpg" alt="" className="w-full rounded-t-md" />
+             {
+              data.map((item)=>(
+                <>
+                 <div key={item.id} className="border rounded-md">
+                <img src={item.img} alt="" className="w-full rounded-t-md" />
                 <div className="p-5">
                   <div className="flex justify-between items-center mb-2">
                     <div className="text-yellow-400 flex gap-1">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                   { [...Array(item.rate)].map((_, index) => (
+    <FaStar key={index} c lassName="text-yellow-500" />
+  ))   }
                     </div>
                     <FaHeart />
                   </div>
-                  <h1 className="text-xl font-semibold">Crispy Chicken</h1>
+                  <h1 className="text-xl font-semibold">{item.name}</h1>
                   <p className="text-gray-600">
-                    Crispy chicken fried to golden perfection with juicy tender inside.
+                    {item.content}
                   </p>
                   <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                    ₹200
+                    ₹{item.price}
                   </button>
                 </div>
               </div>
+                
+                </>
+              ))
+             }
 
-              {/* 2nd card */}
-              <div className="border rounded-md">
-                <img src="burger-2.jpg" alt="" className="w-full rounded-t-md" />
-                <div className="p-5">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="text-yellow-400 flex gap-1">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
-                    </div>
-                    <FaHeart />
-                  </div>
-                  <h1 className="text-xl font-semibold">Ulitimate Bacon</h1>
-                  <p className="text-gray-600">
-                    Ultimate bacon layered with smoky flavor crispy texture and rich taste.
-                  </p>
-                  <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                    ₹250
-                  </button>
-                </div>
-              </div>
-
-              {/* 3rd card */}
-              <div className="border rounded-md">
-                <img src="burger-3.jpg" alt="" className="w-full rounded-t-md" />
-                <div className="p-5">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="text-yellow-400 flex gap-1">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                    </div>
-                    <FaHeart />
-                  </div>
-                  <h1 className="text-xl font-semibold">Black Sheep</h1>
-                  <p className="text-gray-600">
-                    Black Sheep signature dish crafted with bold flavors and unique taste.
-                  </p>
-                  <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                    ₹200
-                  </button>
-                </div>
-              </div>
-
-              {/* 4th card */}
-              <div className="border rounded-md">
-                <img src="burger-4.jpg" alt="" className="w-full rounded-t-md" />
-                <div className="p-5">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="text-yellow-400 flex gap-1">
-                      <FaStar /><FaStar /><FaStar /><FaStarHalfAlt /><FaRegStar />
-                    </div>
-                    <FaHeart />
-                  </div>
-                  <h1 className="text-xl font-semibold">Vegan Burger</h1>
-                  <p className="text-gray-600">
-                    Plant based vegan burger packed with fresh flavors wholesome goodness.
-                  </p>
-                  <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                    ₹250
-                  </button>
-                </div>
-              </div>
+             
 
             </div>
             {/* first row end */}
           </div>
-          {/* second row start */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10">
-
-            {/* 1st card */}
-            <div className="border rounded-md">
-              <img src="burger-5.jpg" alt="" className="w-full rounded-t-md" />
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <div className="text-yellow-400 flex gap-1">
-                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                  </div>
-                  <FaHeart />
-                </div>
-                <h1 className="text-xl font-semibold">Double Burger</h1>
-                <p className="text-gray-600">
-                  Double burger stacked high with juicy patties and bold flavors.
-                </p>
-                <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                  ₹200
-                </button>
-              </div>
-            </div>
-
-            {/* 2nd card */}
-            <div className="border rounded-md">
-              <img src="burger-6.jpg" alt="" className="w-full rounded-t-md" />
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <div className="text-yellow-400 flex gap-1">
-                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
-                  </div>
-                  <FaHeart />
-                </div>
-                <h1 className="text-xl font-semibold">Turkey Burger</h1>
-                <p className="text-gray-600">
-                  Juicy turkey burger grilled perfectly offering lean protein rich flavor.
-                </p>
-                <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                  ₹250
-                </button>
-              </div>
-            </div>
-
-            {/* 3rd card */}
-            <div className="border rounded-md">
-              <img src="burger-7.jpg" alt="" className="w-full rounded-t-md" />
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <div className="text-yellow-400 flex gap-1">
-                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                  </div>
-                  <FaHeart />
-                </div>
-                <h1 className="text-xl font-semibold">Smokey House</h1>
-                <p className="text-gray-600">
-                  Smokey House special loaded with rich smoky flavors and comfort.
-                </p>
-                <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                  ₹200
-                </button>
-              </div>
-            </div>
-
-            {/* 4th card */}
-            <div className="border rounded-md">
-              <img src="burger-8.jpg" alt="" className="w-full rounded-t-md" />
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <div className="text-yellow-400 flex gap-1">
-                    <FaStar /><FaStar /><FaStar /><FaStarHalfAlt /><FaRegStar />
-                  </div>
-                  <FaHeart />
-                </div>
-                <h1 className="text-xl font-semibold">Classic Burger</h1>
-                <p className="text-gray-600">
-                  Classic burger made with juicy patty fresh veggies and soft bun.
-                </p>
-                <button className="mt-3 bg-yellow-400 px-4 py-2 rounded-md font-semibold cursor-pointer hover:bg-red-600 hover:text-white">
-                  ₹250
-                </button>
-              </div>
-            </div>
-
-          </div>
+         
           {/* second row end */}
           {/* item(menu) section end */}
         </div>
@@ -251,7 +121,7 @@ function Home() {
             It turns simple moments into joyful memories filled with laughter and flavor.
             A burger is more than food; it’s an experience that connects hearts.
             Every bite reminds us how sharing a meal creates lasting bonds.</p>
-            <ul className='list-disc p-5'>
+            <ul className='list-disc p-5 space-y-5'>
               <li>Juicy patties spark conversations, laughter, and memories, turning casual meals into shared moments of comfort, flavor, and genuine connection together.</li>
               <li>From first bite to last, burgers unite friends, families, and strangers around grills, tables, stories, smiles, and happiness everywhere always.</li>
               <li>Simple ingredients, bold flavors, and warm buns create irresistible experiences that invite everyone to slow down, share, and celebrate together.</li>
@@ -279,7 +149,7 @@ function Home() {
       </div>
       {/* brand section end */}
       {/* delivery guarantee section start */}
-      <div className='bg-[url("/guarantee.jpg")] bg-cover bg-center flex flex-col justify-center text-center items-center p-40'>
+      <div className='bg-[url("/guarantee.jpg")] bg-cover bg-center flex flex-col justify-center text-center items-center p-10 md:p-30 lg:p-40'>
         <h1 className='font-semibold p-5 lg:text-4xl md:text-2xl sm:text-xl'>WE GUARANTEE</h1>
         <h1 className='font-semibold p-5 lg:text-6xl md:text-4xl sm:text-xl'>30 MINUTES DELIVERY!</h1>
         <p className='pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatibus.</p>
